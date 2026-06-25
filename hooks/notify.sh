@@ -10,6 +10,8 @@
 # 環境變數旋鈕：
 #   NOTIFY_SOUND — 通知音效名稱（預設：Glass）
 set -euo pipefail
+exec 2>>"/tmp/claude-hook-$(date '+%Y-%m-%d').log"
+echo "[$(date '+%H:%M:%S')] [cc-mac-notify/notify.sh] start" >&2
 
 INPUT=$(cat)
 
@@ -54,7 +56,7 @@ fi
 
 # 2) JSONL 最後一筆 ai-title
 if [ -z "$NAME" ] && [ -n "$TP" ] && [ -f "$TP" ]; then
-  NAME=$(grep '"type":"ai-title"' "$TP" 2>/dev/null | tail -1 | jq -r '.aiTitle // ""' 2>/dev/null)
+  NAME=$(grep '"type":"ai-title"' "$TP" 2>/dev/null | tail -1 | jq -r '.aiTitle // ""' 2>/dev/null) || NAME=""
 fi
 
 # 3) cache 的 summary
