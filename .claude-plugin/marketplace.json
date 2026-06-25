@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cc-mac-notify",
+  "description": "A Claude Code plugin that sends macOS native notifications on response completion and questions.",
+  "owner": {
+    "name": "ayii"
+  },
+  "plugins": [
+    {
+      "name": "cc-mac-notify",
+      "description": "macOS native notification when Claude Code finishes a response or asks a question.",
+      "author": {
+        "name": "ayii"
+      },
+      "category": "productivity",
+      "source": "./"
+    }
+  ]
+}

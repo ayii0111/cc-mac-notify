@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "cc-mac-notify",
+  "version": "1.0.0",
+  "description": "Sends a macOS native notification when Claude Code finishes a response or asks a question.",
+  "author": {
+    "name": "ayii"
+  },
+  "category": "productivity"
+}

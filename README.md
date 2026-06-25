@@ -17,14 +17,33 @@ Claude Code 完成工作或詢問問題時，發送 macOS 原生通知。
 
 ## Install
 
+一鍵安裝：
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ayii0111/cc-mac-notify/main/install.sh | bash
+# 在 CC 執行 /reload-plugins
+```
+
+或在 CC 內執行：
+
+```
+/plugin marketplace add ayii0111/cc-mac-notify
+/plugin install cc-mac-notify@cc-mac-notify
+/reload-plugins
+```
+
+或 clone 後本機安裝：
+
+```bash
+git clone https://github.com/ayii0111/cc-mac-notify
+cd cc-mac-notify && ./install.sh
+# 在 CC 執行 /reload-plugins
 ```
 
 ## Uninstall
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ayii0111/cc-mac-notify/main/uninstall.sh | bash
+bash uninstall.sh
 ```
 
 ## Tuning
